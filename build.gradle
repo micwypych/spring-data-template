@@ -2,7 +2,14 @@ plugins {
     id 'java'
     id 'application'
     id 'groovy'
+    id 'idea'
+    id 'jacoco'
+    id 'findbugs'
+    id 'pmd'
+    id 'checkstyle'
+    //id 'org.springframework.boot'
     id "ru.itbasis.gradle.plugins.spring-boot-module-gradle-plugin" version "0.6"
+    id "com.bmuschko:gradle-docker-plugin" version "3.1.0"
 }
 
 def RELEASE_TRAIN = 'Ingalls-SR6'
@@ -31,3 +38,7 @@ dependencies {
 
 //compileOnly "org.projectlombok:lombok:1.16.16"
 //mainClassName = 'org.App'
+
+checkstyle {
+    toolVersion = "8.2"
+}

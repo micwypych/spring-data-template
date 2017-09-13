@@ -1,6 +1,5 @@
 package org
 
-
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import spock.lang.Specification
@@ -28,5 +27,4 @@ class CustomerRepositoryIntegrationSpec extends Specification {
           result[0].firstName == "Mark"
           result[0].lastName == "Mueller"
     }
-
 }
