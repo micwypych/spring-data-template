@@ -1,5 +1,7 @@
 package org;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -48,5 +50,10 @@ class AppConfig {
     @Bean
     public App startApplication(CustomerRepository repository) {
         return new App(repository);
+    }
+
+    @Bean
+    public Logger defaultLogger() {
+        return LoggerFactory.getLogger("spring-data-test");
     }
 }
