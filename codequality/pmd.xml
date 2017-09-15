@@ -63,7 +63,7 @@
         <exclude name="StdCyclomaticComplexity"/>
         <exclude name="TooManyFields"/>
         <exclude name="TooManyMethods"/>
-        <exclude name="UncommentedEmptyMethod"/>
+        <exclude name="UncommentedEmptyMethodBody"/>
         <exclude name="UnusedPrivateMethod"/>
         <exclude name="UnnecessaryParentheses"/>
         <exclude name="UseConcurrentHashMap"/>

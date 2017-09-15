@@ -14,4 +14,8 @@ interface CustomerRepository extends Repository<Customer, Long> {
     Iterable<Customer> findAll();
 
     Customer save(Customer customer);
+
+    long count();
+
+    void deleteAll();
 }

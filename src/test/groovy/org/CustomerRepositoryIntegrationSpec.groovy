@@ -1,5 +1,6 @@
 package org
 
+import org.junit.Before
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import spock.lang.Specification
@@ -8,6 +9,11 @@ import spock.lang.Specification
 class CustomerRepositoryIntegrationSpec extends Specification {
 
     @Autowired CustomerRepository repository
+
+    @Before
+    def clearDB() {
+        repository.deleteAll()
+    }
 
     def "is able to find a single customer by last name" () {
         when:
